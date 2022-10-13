@@ -14,7 +14,10 @@
 			<div class="cart">Cart({{cart}})</div>
 			<div class="product-display">
 				<div class="product-container">
-					<div class="product-image">
+					<div
+						class="product-image"
+						:class="{'out-of-stock-img':!inStock}"
+					>
 						<img :src="image" alt="" />
 					</div>
 					<div class="product-info">
