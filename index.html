@@ -31,11 +31,16 @@
 						<div
 							v-for="variant of variants"
 							:key="variant.id"
+							class="color-circle"
+							:style="{backgroundColor: variant.color}"
 							@mouseover="UpdateImage(variant.image)"
+						></div>
+						<button
+							class="button"
+							@click="AddToCart"
+							:class="{disabledButton: !inStock}"
+							:disabled="!inStock"
 						>
-							{{variant.color }}
-						</div>
-						<button class="button" @click="AddToCart">
 							Add to Cart
 						</button>
 						<button class="button" @click="DecrementItemCart">
