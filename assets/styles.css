@@ -69,6 +69,10 @@ body {
     height: 40px;
     margin-bottom: 20px;
   }
+
+  input[type="checkbox"]{
+    width: 40px;
+  }
   
   label {
     font-size: 20px;
