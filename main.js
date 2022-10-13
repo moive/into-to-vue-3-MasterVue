@@ -6,5 +6,11 @@ const app = Vue.createApp({
         }
     },
     methods: {
+        updateCart(){
+            this.cart += 1;
+        },
+        cleanCart(){
+            this.cart = 0;
+        }
     }
 });

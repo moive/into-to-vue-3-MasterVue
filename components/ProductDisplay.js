@@ -43,8 +43,8 @@ app.component('product-display', {
                 >
                     Add to Cart
                 </button>
-                <button class="button" @click="DecrementItemCart">
-                    Decrement Item Cart
+                <button class="button" @click="cleanCart">
+                    Clean Cart
                 </button>
             </div>
         </div>
@@ -83,11 +83,10 @@ app.component('product-display', {
         }    },
     methods: {
         AddToCart(){
-            this.cart += 1;
+            this.$emit('add-to-cart');
         },
-        DecrementItemCart(){
-            if(this.cart == 0) return;
-            this.cart -= 1;
+        cleanCart(){
+            this.$emit('clean-cart');
         },
         UpdateVariant(index){
             this.selectedVariant = index;
